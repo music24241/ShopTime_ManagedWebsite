@@ -18,7 +18,7 @@
     <div class="container d-flex">
       <div class="navbar__btn"><i class="fas fa-bars"></i></div>
       <a href="index.html" class="navbar__title">Shoptime</a>
-      <ul class="navbar__list">
+      <ul class="navbar__list navbar__mainList">
         <li class="navbar__list__item navbar__list__item--active">
           <a href="index.html">HOME</a>
         </li>
@@ -199,6 +199,12 @@
       </div>
     </div>
   </div>
+  <script>
+    $('.navbar__btn').click(function () {
+      $('.navbar__mainList').toggleClass('d-block');
+      $('.navbar__mainList').toggleClass('p-absolute');
+    })
+  </script>
   <script>
     var timeInterval = $('.timeInterval.dropdown');
     var timeIntervalList = $('.timeInterval .dropdown__list');
