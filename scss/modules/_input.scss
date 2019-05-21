@@ -47,7 +47,7 @@ input[type="checkbox"] {
 
 .checkboxWithWord {
   position: relative;
-  margin-left: 24px;
+  margin-left: 30px;
   white-space: nowrap;
 
   input:checked~.checkbox__checkmark {
@@ -80,7 +80,7 @@ input[type="checkbox"] {
     background-repeat: no-repeat;
     background-size: cover;
     margin-right: 8px;
-    margin-left: 26px;
+    margin-left: 40px;
   }
 
   input:checked~.checkbox__checkmark {

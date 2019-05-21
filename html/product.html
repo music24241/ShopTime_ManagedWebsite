@@ -16,8 +16,9 @@
 <body>
   <nav class="navbar navbar--dark">
     <div class="container d-flex">
+      <div class="navbar__btn"><i class="fas fa-bars"></i></div>
       <a href="index.html" class="navbar__title">Shoptime</a>
-      <ul class="navbar__list">
+      <ul class="navbar__list navbar__mainList">
         <li class="navbar__list__item">
           <a href="index.html">HOME</a>
         </li>
@@ -28,9 +29,12 @@
           <a href="product.html">PRODUCT</a>
         </li>
       </ul>
-      <ul class="navbar__list ml-auto navbar__list--light">
+      <ul class="navbar__list navbar__list--light navbar__list--right">
         <li class="navbar__list__item">
-          <a href="#">ADMIN</a>
+          <a href="#">
+            <i class="fas fa-user fa-lg	"></i>
+            <span>ADMIN</span>
+          </a>
         </li>
       </ul>
     </div>
@@ -311,6 +315,12 @@
 
     </div>
   </div>
+  <script>
+    $('.navbar__btn').click(function () {
+      $('.navbar__mainList').toggleClass('d-block');
+      $('.navbar__mainList').toggleClass('p-absolute');
+    })
+  </script>
   <script>
     let statuses = [{
         title: 'Published',
