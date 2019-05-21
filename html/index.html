@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>index</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/all.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar--dark">
+    <div class="container d-flex">
+      <div class="navbar__btn"><i class="fas fa-bars"></i></div>
+      <a href="index.html" class="navbar__title">Shoptime</a>
+      <ul class="navbar__list">
+        <li class="navbar__list__item navbar__list__item--active">
+          <a href="index.html">HOME</a>
+        </li>
+        <li class="navbar__list__item">
+          <a href="orders.html">ORDERS</a>
+        </li>
+        <li class="navbar__list__item">
+          <a href="product.html">PRODUCT</a>
+        </li>
+      </ul>
+      <ul class="navbar__list navbar__list--light navbar__list--right">
+        <li class="navbar__list__item">
+          <a href="#">
+            <i class="fas fa-user fa-lg	"></i>
+            <span>ADMIN</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main">
+    <div class="container">
+      <div class="title">
+        <h4 class="h4">OVERVIEW</h4>
+        <div class="date color-muted">
+          2018/6/6 <i class="fas fa-caret-right"></i><i class="fas fa-caret-down"></i> 2018/6/13
+        </div>
+        <div class="dropdown timeInterval">
+          <h6 class="color-muted"><span class="dropdown__title">Weekly</span><i
+              class="fas fa-caret-down dropdown__icon"></i></h6>
+          <ul class="dropdown__list">
+            <li class="dropdown__list__item">Daily</li>
+            <li class="dropdown__list__item dropdown__list__item--active">
+              Weekly</li>
+            <li class="dropdown__list__item">Monthly</li>
+            <li class="dropdown__list__item">Yearly</li>
+            <li class="dropdown__list__item">Custom</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <ul class="g-grid-3 overviewList">
+          <li class="col text-center overviewList__item">
+            <h6 class="h6"><i class="fas fa-hand-holding-usd mr-1"></i>TOTAL REVENUE</h6>
+            <div class="highlight-text color-success mt-2">54,540</div>
+          </li>
+          <li class="col text-center overviewList__item">
+            <h6 class="h6"><i class="fas fa-wallet mr-1"></i>TOTAL COST </h6>
+            <div class="highlight-text color-danger mt-2">12,660</div>
+          </li>
+          <li class="col text-center overviewList__item">
+            <h6 class="h6"><i class="fas fa-money-bill mr-1"></i>NET INCOME</h6>
+            <div class="highlight-text color-primary mt-2">41,880</div>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col activity">
+          <h4 class="h4">Activity</h4>
+          <canvas class="activityChart"></canvas>
+        </div>
+      </div>
+      <div class="row">
+        <div class="g-grid-2">
+          <div class="col transweb">
+            <h4 class="h4">Transaction Website</h4>
+            <ul class="list transwebList">
+              <li class="list__item--row transwebList__item">
+                <i class="fab fa-facebook-square fa-3x"></i>
+                <div class="h6 color-muted">Facebook.com</div>
+                <div class="transwebList__item__data">
+                  <div class="h5">45,836</div>
+                  <div class="transwebList__item__data__persent color-success">
+                    <i class="fas fa-arrow-up"></i>20%
+                    <div class="tooltip">
+                      <div class="tooltip__title color-light d-flex">INCREASE <span
+                          class="color-success tooltip__title__highlight">899</span> VIEWS
+                      </div>
+                      <div class="tooltip__desc color-muted">last week: 44,937 </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list__item--row transwebList__item">
+                <i class="fab fa-google fa-3x"></i>
+                <div class="h6 color-muted">google.com</div>
+                <div class="transwebList__item__data">
+                  <div class="h5">23,582</div>
+                  <div class="transwebList__item__data__persent color-success"><i class="fas fa-arrow-up"></i>12%</div>
+                </div>
+              </li>
+              <li class="list__item--row transwebList__item">
+                <i class="fab fa-wordpress fa-3x"></i>
+                <div class="h6 color-muted">Wordpress.com</div>
+                <div class="transwebList__item__data">
+                  <div class="h5">1,057</div>
+                  <div class="transwebList__item__data__persent color-danger"><i class="fas fa-arrow-down"></i>30%</div>
+                </div>
+
+              </li>
+              <li class="list__item--row transwebList__item">
+                <i class="fab fa-instagram fa-3x"></i>
+                <div class="h6 color-muted">instagram.com</div>
+                <div class="transwebList__item__data">
+                  <div class="h5">2,489</div>
+                  <div class="transwebList__item__data__persent color-danger"><i class="fas fa-arrow-down"></i>15%</div>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+          <div class="col lastOrder">
+            <h4 class="h4">Cowboy Jacket</h4>
+            <ul class="list lastOrderList">
+              <li class="list__item--row lastOrderList__item">
+                <div class="lastOrderList__item__img img1"></div>
+                <div class="lastOrderList__item__content">
+                  <div class="lastOrderList__item__content__desc">
+                    <h5 class="h5">Vintage T-shirt</h5>
+                    <ul class="color-muted">
+                      <li>
+                        <i class="fas fa-clock fa-xs"></i> 2018/6/13 13:42
+                      </li>
+                      <li>
+                        <i class="fas fa-male"></i> Belle Willis
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="lastOrderList__item__content__total">
+                    <div class="smallTitle">Total</div>
+                    <h5 class="h5">3200</h5>
+                  </div>
+                </div>
+              </li>
+              <li class="list__item--row lastOrderList__item">
+                <div class="lastOrderList__item__img img2"></div>
+                <div class="lastOrderList__item__content">
+                  <div class="lastOrderList__item__content__desc">
+                    <h5 class="h5">Vintage T-shirt</h5>
+                    <ul class=" color-muted">
+                      <li>
+                        <i class="fas fa-clock fa-xs"></i> 2018/6/13 10:45
+                      </li>
+                      <li>
+                        <i class="fas fa-male"></i> Adrian Cummings
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="lastOrderList__item__content__total">
+                    <div class="smallTitle">Total</div>
+                    <h5 class="h5">2,800</h5>
+                  </div>
+                </div>
+              </li>
+              <li class="list__item--row lastOrderList__item">
+                <div class="lastOrderList__item__img img3"></div>
+                <div class="lastOrderList__item__content">
+                  <div class="lastOrderList__item__content__desc">
+                    <h5 class="h5">Coach Coat</h5>
+                    <ul class="color-muted">
+                      <li>
+                        <i class="fas fa-clock fa-xs"></i> 2018/6/13 8:26
+                      </li>
+                      <li>
+                        <i class="fas fa-male"></i> Lura Holland
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="lastOrderList__item__content__total">
+                    <div class="smallTitle">Total</div>
+                    <h5 class="h5">1,600</h5>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var timeInterval = $('.timeInterval.dropdown');
+    var timeIntervalList = $('.timeInterval .dropdown__list');
+    var timeIntervalTitle = $('.timeInterval .dropdown__title');
+
+    timeInterval.click(function () {
+      timeIntervalList.toggleClass('.timeInterval dropdown__list--active');
+    });
+
+    timeIntervalList.click(function (e) {
+      $(this).children().siblings('.dropdown__list__item--active').removeClass(
+        'dropdown__list__item--active')
+      e.target.classList.add('dropdown__list__item--active');
+      timeIntervalTitle.text(e.target.textContent);
+    })
+  </script>
+  <script>
+    var ctx = document.querySelector('.activityChart');
+    var data = {
+      labels: ["5 JUN", "6 JUN", "7 JUN", "8 JUN", "9 JUN", "10 JUN", "11 JUN", "12 JUN"],
+      datasets: [{
+          label: "",
+          data: [7200, 7000, 5500, 7200, 5800, 6100, 7500, 7200],
+          borderColor: "#7ED321",
+          fill: false,
+          lineTension: 0,
+        },
+        {
+          label: "",
+          data: [6100, 5200, 2000, 4000, 3800, 5300, 6200, 5900],
+          borderColor: "#4A90E2",
+          fill: false,
+          lineTension: 0,
+        },
+        {
+          label: "",
+          data: [1000, 1200, 2800, 3000, 2300, 800, 1000, 1900],
+          borderColor: "#D0021B",
+          fill: false,
+          lineTension: 0,
+        },
+      ],
+    };
+    var options = {
+      // responsive: true,
+      // maintainAspectRatio: false,
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true,
+            fontSize: 16,
+          }
+        }],
+        xAxes: [{
+          gridLines: {
+            display: false,
+          },
+          ticks: {
+            fontSize: 16,
+          }
+        }]
+      },
+      legend: {
+        display: false
+      },
+      tooltips: {
+        bodyFontColor: '#fff',
+        xPadding: 16,
+        yPadding: 10,
+        bodyFontSize: 16,
+        displayColors: false,
+        callbacks: {
+          label: function (tooltipItem) {
+            return tooltipItem.yLabel;
+          },
+          title: function (a) {
+            return;
+          },
+        }
+      }
+    };
+
+    var chart = new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: options,
+    })
+  </script>
+</body>
+
+</html>

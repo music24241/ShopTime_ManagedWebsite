@@ -1,0 +1,42 @@
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+
+  &-primary {
+    background-color: $color-primary;
+    color: $color-light;
+  }
+
+  &-success {
+    background-color: $color-success;
+    color: $color-light;
+  }
+
+  &-muted {
+    background-color: $color-muted;
+    color: $color-light;
+  }
+
+  &-hope {
+    background-color: $color-hope;
+    color: $color-light;
+  }
+
+  &-dark {
+    background-color: $color-dark;
+    color: $color-light;
+  }
+
+  &-block {
+    display: block;
+    width: 100%;
+  }
+
+  &-outline-muted {
+    color: darken($color: $color-muted, $amount: 20%);
+    background-color: inherit;
+  }
+}

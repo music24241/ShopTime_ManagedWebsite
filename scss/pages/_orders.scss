@@ -1,0 +1,45 @@
+.dropdown.statusDropDown {
+  position: static;
+
+  i {
+    padding-left: 0px;
+  }
+
+  input:checked~.dropdown__list {
+    display: block;
+  }
+
+  .dropdown__list {
+    left: 0px;
+  }
+}
+
+.statusChangeIcon {
+  margin-left: 16px;
+}
+
+.orderTable {
+  thead {
+
+    th:nth-child(3),
+    th:nth-child(4),
+    th:nth-child(5),
+    th:nth-child(6) {
+      padding: 11px 12px;
+    }
+  }
+
+  tbody {
+
+    td:nth-child(3),
+    td:nth-child(4),
+    td:nth-child(5),
+    td:nth-child(6) {
+      padding: 20px 12px;
+    }
+
+    tr:first-child td {
+      padding-top: 17px;
+    }
+  }
+}

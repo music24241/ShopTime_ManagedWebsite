@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>product</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/all.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar--dark">
+    <div class="container d-flex">
+      <a href="index.html" class="navbar__title">Shoptime</a>
+      <ul class="navbar__list">
+        <li class="navbar__list__item">
+          <a href="index.html">HOME</a>
+        </li>
+        <li class="navbar__list__item">
+          <a href="orders.html">ORDERS</a>
+        </li>
+        <li class="navbar__list__item navbar__list__item--active">
+          <a href="product.html">PRODUCT</a>
+        </li>
+      </ul>
+      <ul class="navbar__list ml-auto navbar__list--light">
+        <li class="navbar__list__item">
+          <a href="#">ADMIN</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main">
+    <div class="container">
+      <div class="title d-flex justify-content-between align-items-center">
+        <h6 class="d-flex  p-relative">
+          <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkbox__checkmark"></span>
+          </label>
+          <label class="dropdown dropdownNormal">
+            <input type="checkbox">
+            <i class="fas fa-caret-down dropdown__icon"></i>
+            <ul class="dropdown__list">
+              <li class="dropdown__list__item">Select All</li>
+              <li class="dropdown__list__item dropdown__list__item--active">Unselect All</li>
+              <li class="dropdown__list__item">Published</li>
+              <li class="dropdown__list__item">UnPublished</li>
+            </ul>
+          </label>
+          <label class="dropdown dropdownNormal">
+            <input type="checkbox">
+            <i class="fas fa-tags dropdown__icon"></i>
+            <div class="dropdown__tooltip">
+              Change Status
+            </div>
+            <ul class="dropdown__list">
+              <li class="dropdown__list__item dropdown__list__item--disabled">Change Status to…</li>
+              <li class="dropdown__list__item dropdown__list__item--active">Published</li>
+              <li class="dropdown__list__item">UnPublished</li>
+            </ul>
+          </label>
+        </h6>
+        <button class="btn btn-dark btnToModal">
+          ADD NEW PRODUCT
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+      <div class="tablerow">
+        <table class="table productTable">
+          <thead>
+            <tr>
+              <th style="padding-left: 44px;">Product</th>
+              <th>Original</th>
+              <th>Discount</th>
+              <th>Size</th>
+              <th>Color</th>
+              <th>Inventory</th>
+              <th width="20%">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label class="checkbox checkboxWithImg ">
+                  <div class="img"></div>
+                  Mauris non tem.
+                  <input type="checkbox">
+                  <span class="checkbox__checkmark"></span>
+                </label>
+              </td>
+              <td>$3,200</td>
+              <td>$2,800</td>
+              <td class="tdList">
+                <div class="tdList__item">
+                  L
+                  <p class="tdList__item__noword"></p>
+                </div>
+                <div class="tdList__item">
+                  M
+                  <p class="tdList__item__noword"></p>
+                </div>
+                <div class="tdList__item">
+                  S
+                  <p class="tdList__item__noword"></p>
+                </div>
+              </td>
+              <td class="tdList">
+                <div class="tdList__item">
+                  Gray
+                  <p>Black</p>
+                </div>
+                <div class="tdList__item">
+                  Gray
+                  <p>Black</p>
+                </div>
+                <div class="tdList__item">
+                  Gray
+                  <p>Black</p>
+                </div>
+              </td>
+              <td class="tdList tdList--right">
+                <div class="tdList__item">
+                  15
+                  <p>20</p>
+                </div>
+                <div class="tdList__item">
+                  15
+                  <p>20</p>
+                </div>
+                <div class="tdList__item">
+                  15
+                  <p>20</p>
+                </div>
+              </td>
+              <td>
+                <label class="dropdown dropdownBtnStyle">
+                  <input type="checkbox">
+                  <button class="btn btn-success">
+                    <span class="dropdown__title">PUBLISHED</span>
+                    <i class="fas fa-caret-down dropdown__icon"></i>
+                  </button></button>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__list__item dropdown__list__item--active">Published</li>
+                    <li class="dropdown__list__item">UnPublished</li>
+                  </ul>
+                </label>
+              </td>
+            </tr>
+            <tr class="color-muted">
+              <td>
+                <label class="checkbox checkboxWithImg ">
+                  <div class="img"></div>
+                  Mauris non tem.
+                  <input type="checkbox">
+                  <span class="checkbox__checkmark"></span>
+                </label>
+              </td>
+              <td>$3,200</td>
+              <td>$2,800</td>
+              <td class="tdList">
+                <div class="tdList__item">
+                  L
+                  <p class="tdList__item__noword"></p>
+                </div>
+                <div class="tdList__item">
+                  M
+                  <p class="tdList__item__noword"></p>
+                </div>
+                <div class="tdList__item">
+                  S
+                  <p class="tdList__item__noword"></p>
+                </div>
+              </td>
+              <td class="tdList">
+                <div class="tdList__item">
+                  Gray
+                  <p>Black</p>
+                </div>
+                <div class="tdList__item">
+                  Gray
+                  <p>Black</p>
+                </div>
+                <div class="tdList__item">
+                  Gray
+                  <p>Black</p>
+                </div>
+              </td>
+              <td class="tdList tdList--right">
+                <div class="tdList__item">
+                  15
+                  <p>20</p>
+                </div>
+                <div class="tdList__item">
+                  15
+                  <p>20</p>
+                </div>
+                <div class="tdList__item">
+                  15
+                  <p>20</p>
+                </div>
+              </td>
+              <td>
+                <label class="dropdown dropdownBtnStyle">
+                  <input type="checkbox">
+                  <button class="btn btn-muted">
+                    <span class="dropdown__title">UNPUBLISHED</span>
+                    <i class="fas fa-caret-down dropdown__icon"></i>
+                  </button></button>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__list__item">Published</li>
+                    <li class="dropdown__list__item dropdown__list__item--active">UnPublished</li>
+                  </ul>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="paganation">
+        <a href="">«</a>
+        <a href="" class="active">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">»</a>
+      </ul>
+      <!-- The Modal -->
+      <div class="modal">
+        <!-- Modal content -->
+        <div class="modal__content">
+          <div class="modal__header">
+            <span class="close">&times;</span>
+            <h4 class="h4">ADD NEW PRODUCT</h4>
+          </div>
+          <div class="modal__body">
+            <div class="g-grid-modal">
+              <div class="col">
+                <label class="uploadFile">
+                  <input id="upload_img" style="display:none;" type="file">
+                  <i class="fas fa-cloud-upload-alt fa-3x	"></i>
+                  <p>Drag an image or click here to upload…</p>
+                </label>
+                <!-- todo: img list -->
+                <div class="g-grid-imageList">
+                  <img
+                    src="https://images.unsplash.com/photo-1550623030-f262ade9b8e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                  <img
+                    src="https://images.unsplash.com/photo-1550623030-f262ade9b8e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                  <img
+                    src="https://images.unsplash.com/photo-1550623030-f262ade9b8e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                  <img
+                    src="https://images.unsplash.com/photo-1550623030-f262ade9b8e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                </div>
+              </div>
+              <div class="col">
+                <form class="form addNewProForm">
+                  <h6 class="h6">Product Discription</h6>
+                  <input type="text" placeholder="Title" class="form__control">
+                  <textarea rows="10" placeholder="Discription" class="form__control"></textarea>
+                  <div class="form__group">
+                    <label class="h6">Price</label>
+                    <div class="form--row price">
+                      <div class="inputGroup">
+                        <div class="inputGroup__prepend">Original</div>
+                        <input type="text" class="form__control" value="$3,200">
+                      </div>
+                      <div class="inputGroup">
+                        <div class="inputGroup__prepend">Discount</div>
+                        <input type="text" class="form__control" value="$2,800">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__group specification">
+                    <label class="h6">Specification</label>
+                    <div class="form--row">
+                      <div class="inputGroup">
+                        <div class="inputGroup__prepend">Size</div>
+                        <input type="text" class="form__control specification__sizeInput">
+                      </div>
+                      <div class="inputGroup">
+                        <div class="inputGroup__prepend">Color</div>
+                        <input type="text" class="form__control" value="Gray">
+                      </div>
+                      <div class="inputGroup">
+                        <div class="inputGroup__prepend">Inventory</div>
+                        <input type="text" class="form__control" value="15">
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-dark btn-block addBtn">ADD NEW SPECIFICATION<i class="fas fa-plus"
+                      style="margin-left: 4px"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal__footer">
+            <button class="btn btn-outline-muted">SAVE DRAFT</button>
+            <button class="btn btn-dark">PUBLISH</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    let statuses = [{
+        title: 'Published',
+        class: 'btn-success',
+        trClass: ''
+      },
+      {
+        title: 'UnPublished',
+        class: 'btn-muted',
+        trClass: 'color-muted'
+      },
+    ];
+
+    $(document).ready(function () {
+
+      $(document).mouseup(function (e) {
+        var container = $(".dropdown");
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.children('.dropdown__list, .dropdown__checkboxList').removeClass(
+            'dropdown__list--active dropdown__checkboxList--active')
+        }
+      });
+
+      $('.dropdown.dropdownNormal .dropdown__icon').click(function (e) {
+        $(this).siblings('.dropdown__list').toggleClass('dropdown__list--active');
+        $(this).parents('.dropdownNormal').siblings().children('.dropdown__list').removeClass(
+          'dropdown__list--active');
+      })
+
+      $('.dropdown.dropdownBtnStyle .btn').click(function (e) {
+        let dropDownList = "dropdown__list";
+        let dropDownListItem = "dropdown__list__item";
+        // $(this).siblings('.dropdown__list ').show('slow');
+        $(this).siblings('.dropdown__list ').toggleClass(`${dropDownList}--active`);
+        $(this).parents('tr').siblings().find(`.${dropDownList}--active`)
+          .removeClass(`${dropDownList}--active`);
+        // 針對子選項操作
+        $(this).siblings().find(`.${dropDownListItem}`).click(function (e) {
+          $(this).parent().children().siblings(`.${dropDownListItem}--active`)
+            .removeClass(`${dropDownListItem}--active`)
+          e.target.classList.add(`${dropDownListItem}--active`);
+          $(this).parents('.dropdown').find('.dropdown__title').text(e.target.textContent.toUpperCase())
+          $(this).parents('.dropdown').find('.btn').removeClass().addClass(function () {
+            return 'btn ' + statuses.filter((item) => item.title == e.target.textContent)[0].class;
+          })
+          //效果
+          $(this).parents('tr').removeClass().addClass(() => {
+            return statuses.filter((item) => item.title == e.target.textContent)[0].trClass
+          })
+        })
+      });
+
+      $('.dropdown.dropdownCBXStyle').click(function (e) {
+        $(this).children('.dropdown__checkboxList').toggleClass(' dropdown__checkboxList--active');
+      })
+
+      $('.addBtn').click(function (e) {
+        e.preventDefault();
+        $('.specification')
+          .append(`<div class="form--row">
+                      <div class="inputGroup">
+                        <div class="inputGroup__prepend">Size</div>
+                        <input type="text" class="form__control specification__sizeInput">
+                      </div>
+                      <div class="inputGroup">
+                        <div class="inputGroup__prepend">Color</div>
+                        <input type="text" class="form__control" value="Gray">
+                      </div>
+                      <div class="inputGroup">
+                        <div class="inputGroup__prepend">Inventory</div>
+                        <input type="text" class="form__control" value="15">
+                      </div>
+                    </div>`)
+      })
+    })
+
+    var modal = document.querySelector(".modal");
+    var btn = document.querySelector(".btnToModal");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

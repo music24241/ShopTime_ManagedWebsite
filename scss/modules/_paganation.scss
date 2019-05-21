@@ -1,0 +1,26 @@
+.paganation {
+  display: flex;
+  margin-top: 10px;
+  margin-right: 30px;
+  padding-bottom: 30px;
+
+  a {
+    padding: 13px 16px;
+    // display: block;
+    background-color: $color-light;
+
+    &:first-child {
+      margin-left: auto;
+    }
+
+    &:hover {
+      background-color: $color-dark;
+      color: $color-light;
+    }
+  }
+
+  .active {
+    background-color: $color-dark;
+    color: $color-light;
+  }
+}

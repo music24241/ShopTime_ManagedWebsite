@@ -1,0 +1,29 @@
+/**
+* color
+**/
+$color-primary: #4A90E2;
+$color-secondary: #F2F2F2;
+$color-success: #7ED321;
+$color-danger: #D0021B;
+$color-hope: #F5A623;
+$color-dark: black;
+$color-muted: #9B9B9B;
+$color-light: white;
+$color-muter:#EBEBEB;
+
+/**
+* typography
+**/
+$font-base: 1rem !default;
+$font-small: $font-base*0.875; //14
+$font-big: $font-base*1.25; //20
+$font-large: $font-base*1.5; //24
+
+/**
+* screen
+**/
+$large-screen: 960px;
+$medium-screen: 780px;
+$small-screen: 584px;
+$mobile-screen: 440px;
+$small-mobile-screen: 360px;

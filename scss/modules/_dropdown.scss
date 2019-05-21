@@ -1,0 +1,164 @@
+.dropdown {
+  // margin-left: 20px;
+  position: relative;
+  align-self: center;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-dark;
+
+    .dropdown__tooltip {
+      display: block;
+    }
+  }
+
+  &__icon {
+    padding-left: 8px;
+  }
+
+  &__tooltip {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: calc(50% + 4px);
+    transform: translateX(-50%);
+    padding: 8px;
+    background: $color-dark;
+    color: $color-light;
+    white-space: nowrap;
+
+    &:after {
+      content: '';
+      @include arrowUp;
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.dropdown__list {
+  position: absolute;
+  top: 30px;
+  color: $color-dark;
+  display: none;
+  box-shadow: 1px 2px 10px 0 $color-muted;
+  font-size: $font-base;
+
+  &--active {
+    transition: 0.3s;
+    display: block;
+    z-index: 1;
+  }
+
+  &__item {
+    padding: 8px 37px;
+    background-color: $color-light;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+
+    &:first-child {
+      padding-top: 16px;
+    }
+
+    &:hover {
+      background-color: $color-dark;
+      color: $color-light;
+      cursor: pointer;
+    }
+
+    &--active {
+      background-color: $color-dark;
+      color: $color-light;
+    }
+
+    &--disabled {
+      &:hover {
+        background-color: $color-light;
+        color: $color-dark;
+        cursor: default;
+      }
+    }
+  }
+}
+
+.dropdown__checkboxList {
+  position: absolute;
+  right: 0px;
+  top: 24px;
+  color: $color-dark;
+  display: none;
+  box-shadow: 1px 2px 10px 0;
+
+  &--active {
+    transition: 0.3s;
+    display: block;
+    z-index: 1;
+  }
+
+  &__item {
+    padding: 9px 20px;
+    background-color: $color-light;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    padding-left: 46px;
+
+    input[type="checkbox"] {
+      opacity: 0;
+      position: absolute;
+      width: 0px;
+      height: 0px;
+    }
+
+    &:hover {
+      input~.dropdown__checkboxList__item__checkmark {
+        background-color: $color-muted;
+      }
+    }
+
+    input:checked~.dropdown__checkboxList__item__checkmark:after {
+      display: block;
+    }
+
+    input:checked~.dropdown__checkboxList__item__checkmark {
+      background: $color-dark;
+    }
+
+    &:first-child {
+      padding-top: 16px;
+    }
+
+    &--active {
+      background-color: $color-dark;
+      color: $color-light;
+    }
+
+    &__checkmark {
+      width: 15px;
+      height: 15px;
+      border: 1px solid $color-dark;
+      border-radius: 2px;
+      margin-right: 8px;
+      cursor: pointer;
+      position: absolute;
+      left: 20px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        width: 3px;
+        height: 7px;
+        left: 4px;
+        top: 1px;
+        border: solid $color-light;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
