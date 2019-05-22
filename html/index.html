@@ -8,7 +8,7 @@
   <title>index</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="css/all.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
 </head>
@@ -63,15 +63,15 @@
         <ul class="g-grid-3 overviewList">
           <li class="col text-center overviewList__item">
             <h6 class="h6"><i class="fas fa-hand-holding-usd mr-1"></i>TOTAL REVENUE</h6>
-            <div class="highlight-text color-success mt-2">54,540</div>
+            <div class="text-highlight color-success mt-2">54,540</div>
           </li>
           <li class="col text-center overviewList__item">
             <h6 class="h6"><i class="fas fa-wallet mr-1"></i>TOTAL COST </h6>
-            <div class="highlight-text color-danger mt-2">12,660</div>
+            <div class="text-highlight color-danger mt-2">12,660</div>
           </li>
           <li class="col text-center overviewList__item">
             <h6 class="h6"><i class="fas fa-money-bill mr-1"></i>NET INCOME</h6>
-            <div class="highlight-text color-primary mt-2">41,880</div>
+            <div class="text-highlight color-primary mt-2">41,880</div>
           </li>
         </ul>
       </div>
@@ -200,25 +200,39 @@
     </div>
   </div>
   <script>
-    $('.navbar__btn').click(function () {
-      $('.navbar__mainList').toggleClass('d-block');
-      $('.navbar__mainList').toggleClass('p-absolute');
-    })
-  </script>
-  <script>
     var timeInterval = $('.timeInterval.dropdown');
     var timeIntervalList = $('.timeInterval .dropdown__list');
     var timeIntervalTitle = $('.timeInterval .dropdown__title');
 
-    timeInterval.click(function () {
-      timeIntervalList.toggleClass('.timeInterval dropdown__list--active');
-    });
+    $(document).ready(function () {
+      $('.navbar__btn').click(function () {
+        $('.navbar__mainList').toggleClass('d-block');
+        $('.navbar__mainList').toggleClass('p-absolute');
+      })
 
-    timeIntervalList.click(function (e) {
-      $(this).children().siblings('.dropdown__list__item--active').removeClass(
-        'dropdown__list__item--active')
-      e.target.classList.add('dropdown__list__item--active');
-      timeIntervalTitle.text(e.target.textContent);
+      $(document).mouseup(function (e) {
+        let navbar = $('.navbar');
+        if (!navbar.is(e.target) && navbar.has(e.target).length === 0) {
+          $('.navbar__mainList').removeClass(
+            'd-block p-absolute')
+        }
+
+        if (!timeInterval.is(e.target) && timeInterval.has(e.target).length === 0) {
+          timeIntervalList.removeClass(
+            '.timeInterval dropdown__list--active')
+        }
+      });
+
+      timeInterval.click(function () {
+        timeIntervalList.toggleClass('.timeInterval dropdown__list--active');
+      });
+
+      timeIntervalList.click(function (e) {
+        $(this).children().siblings('.dropdown__list__item--active').removeClass(
+          'dropdown__list__item--active')
+        e.target.classList.add('dropdown__list__item--active');
+        timeIntervalTitle.text(e.target.textContent);
+      })
     })
   </script>
   <script>

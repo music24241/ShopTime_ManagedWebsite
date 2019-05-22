@@ -8,7 +8,7 @@
   <title>product</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="css/all.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
 </head>
@@ -316,12 +316,6 @@
     </div>
   </div>
   <script>
-    $('.navbar__btn').click(function () {
-      $('.navbar__mainList').toggleClass('d-block');
-      $('.navbar__mainList').toggleClass('p-absolute');
-    })
-  </script>
-  <script>
     let statuses = [{
         title: 'Published',
         class: 'btn-success',
@@ -333,16 +327,24 @@
         trClass: 'color-muted'
       },
     ];
-
     $(document).ready(function () {
-
       $(document).mouseup(function (e) {
-        var container = $(".dropdown");
-        if (!container.is(e.target) && container.has(e.target).length === 0) {
-          container.children('.dropdown__list, .dropdown__checkboxList').removeClass(
+        var dropdown = $(".dropdown");
+        if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0) {
+          dropdown.children('.dropdown__list, .dropdown__checkboxList').removeClass(
             'dropdown__list--active dropdown__checkboxList--active')
         }
+        let navbar = $('.navbar');
+        if (!navbar.is(e.target) && navbar.has(e.target).length === 0) {
+          $('.navbar__mainList').removeClass(
+            'd-block p-absolute')
+        }
       });
+
+      $('.navbar__btn').click(function () {
+        $('.navbar__mainList').toggleClass('d-block');
+        $('.navbar__mainList').toggleClass('p-absolute');
+      })
 
       $('.dropdown.dropdownNormal .dropdown__icon').click(function (e) {
         $(this).siblings('.dropdown__list').toggleClass('dropdown__list--active');

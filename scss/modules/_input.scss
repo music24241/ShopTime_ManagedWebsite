@@ -57,6 +57,7 @@ input[type="checkbox"] {
   .checkbox__checkmark {
     position: absolute;
     top: 2px;
+    left: -31px;
     border: none;
     background: $color-light;
 
@@ -90,6 +91,7 @@ input[type="checkbox"] {
   .checkbox__checkmark {
     position: absolute;
     top: 50%;
+    left: -8px;
     transform: translateY(-50%);
     border: none;
     background: $color-light;
