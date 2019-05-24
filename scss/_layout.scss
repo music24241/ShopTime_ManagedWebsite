@@ -94,11 +94,6 @@
           padding: 25px 20px;
         }
 
-        @include small-screen {
-          padding: 23px 20px 0 0px;
-          width: 100%;
-        }
-
         i {
           display: none;
 
@@ -177,7 +172,10 @@
 
   .tablerow {
     padding: 16px 30px;
-    overflow-x: auto;
+
+    @include small-screen {
+      padding: 16px 20px;
+    }
   }
 
   .title {

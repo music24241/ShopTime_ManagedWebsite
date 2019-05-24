@@ -1,4 +1,8 @@
 .productTable {
+  @include large-screen {
+    overflow-x: scroll;
+  }
+
   thead {
 
     th:nth-child(5) {
@@ -69,19 +73,29 @@
 .price {
   input {
     text-align: right;
+    max-width: 175px;
   }
 }
 
 .specification {
   input {
     text-align: center;
+
+    @include mobile-screen {
+      text-align: left
+    }
   }
 
   &__sizeInput {
     width: 60px;
+    text-align: center !important;
 
-    @include large-screen {
-      width: 45px;
+    @include medium-screen {
+      width: 100px;
+    }
+
+    @include small-screen {
+      width: 60px;
     }
   }
 }

@@ -143,7 +143,7 @@ table {
   border-spacing: 0;
 }
 
-body * {
+body {
   font-size: 1rem;
   font-family: 'Heebo', sans-serif;
   -webkit-box-sizing: border-box;
@@ -615,10 +615,22 @@ input[type="checkbox"] {
   width: 100%;
 }
 
+@media (max-width: 584px) {
+  .form__control {
+    padding: 9px 4px;
+  }
+}
+
 .form .inputGroup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 440px) {
+  .form .inputGroup {
+    display: block;
+  }
 }
 
 .form .inputGroup__prepend {
@@ -643,8 +655,23 @@ input[type="checkbox"] {
   }
 }
 
+@media (max-width: 440px) {
+  .form .inputGroup__prepend {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    padding-top: 4px;
+  }
+}
+
 .form .inputGroup .form__control {
   border-radius: 0 4px 4px 0;
+}
+
+@media (max-width: 440px) {
+  .form .inputGroup .form__control {
+    border-radius: 4px;
+  }
 }
 
 textarea {
@@ -824,6 +851,12 @@ textarea {
   }
 }
 
+@media (max-width: 440px) {
+  .modal__body {
+    padding: 30px 20px;
+  }
+}
+
 .modal__footer {
   padding: 30px;
   padding-top: 0;
@@ -955,13 +988,6 @@ textarea {
   }
 }
 
-@media (max-width: 584px) {
-  .navbar__list__item a {
-    padding: 23px 20px 0 0px;
-    width: 100%;
-  }
-}
-
 .navbar__list__item a i {
   display: none;
 }
@@ -1043,7 +1069,12 @@ textarea {
 
 .main .tablerow {
   padding: 16px 30px;
-  overflow-x: auto;
+}
+
+@media (max-width: 584px) {
+  .main .tablerow {
+    padding: 16px 20px;
+  }
 }
 
 .main .title h6 .checkbox {
@@ -1734,6 +1765,12 @@ textarea {
   margin-left: 16px;
 }
 
+@media (max-width: 960px) {
+  .orderTable {
+    overflow-x: scroll;
+  }
+}
+
 .orderTable thead th:nth-child(3),
 .orderTable thead th:nth-child(4),
 .orderTable thead th:nth-child(5),
@@ -1750,6 +1787,12 @@ textarea {
 
 .orderTable tbody tr:first-child td {
   padding-top: 17px;
+}
+
+@media (max-width: 960px) {
+  .productTable {
+    overflow-x: scroll;
+  }
 }
 
 .productTable thead th:nth-child(5) {
@@ -1818,19 +1861,33 @@ textarea {
 
 .price input {
   text-align: right;
+  max-width: 175px;
 }
 
 .specification input {
   text-align: center;
 }
 
-.specification__sizeInput {
-  width: 60px;
+@media (max-width: 440px) {
+  .specification input {
+    text-align: left;
+  }
 }
 
-@media (max-width: 960px) {
+.specification__sizeInput {
+  width: 60px;
+  text-align: center !important;
+}
+
+@media (max-width: 780px) {
   .specification__sizeInput {
-    width: 45px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 584px) {
+  .specification__sizeInput {
+    width: 60px;
   }
 }
 /*# sourceMappingURL=all.css.map */

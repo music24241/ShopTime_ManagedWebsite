@@ -19,6 +19,10 @@
 }
 
 .orderTable {
+  @include large-screen {
+    overflow-x: scroll;
+  }
+
   thead {
 
     th:nth-child(3),

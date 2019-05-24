@@ -82,6 +82,10 @@
   @include medium-screen {
     padding: 30px 40px;
   }
+
+  @include mobile-screen {
+    padding: 30px 20px;
+  }
 }
 
 .modal__footer {
