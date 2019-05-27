@@ -4,7 +4,7 @@
 [Demo website](https://music24241.github.io/ShopTime_ManagedWebsite/)
 ***
 ### 介紹
-此為模擬後台管理網頁，主要練習使用 SCSS 做一個響應式網頁介面的作品。
+此為模擬後台管理網頁介面，主要練習使用 SCSS 做一個響應式網頁介面的作品。
 ***
 ### 使用技術
 - HTML
