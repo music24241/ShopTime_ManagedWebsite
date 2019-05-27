@@ -1,5 +1,5 @@
 ## ShopTime 後台管理網頁
-
+![Image of work](https://github.com/music24241/ShopTime_ManagedWebsite/blob/master/music24241.github.io_ShopTime_ManagedWebsite_.png)
 ### Demo
 [Demo website](https://music24241.github.io/ShopTime_ManagedWebsite/)
 ***
